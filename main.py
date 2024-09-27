@@ -83,11 +83,11 @@ for row_idx, row_data in enumerate(sorted_data, start=2):
 max_row = new_sheet.max_row
 
 for row in range(2, max_row):
-    new_sheet[f'H{row}'] = f'=IFERROR(VLOOKUP($E{row},\'{last_week}\'!$E$1:$O$500,4,FALSE),'New')'
-    new_sheet[f'I{row}'] = f'=IFERROR(VLOOKUP($E{row},\'{last_week}\'!$E$1:$O$500,5,FALSE),'')'
-    new_sheet[f'J{row}'] = f'=IFERROR(VLOOKUP($E{row},\'{last_week}\'!$E$1:$O$500,6,FALSE),'')'
-    new_sheet[f'K{row}'] = f'=IFERROR(VLOOKUP($E{row},\'{last_week}\'!$E$1:$O$500,7,FALSE),'')'
-    new_sheet[f'L{row}'] = f'=IFERROR(VLOOKUP($E{row},\'{last_week}\'!$E$1:$O$500,8,FALSE),'')'
+    new_sheet[f'H{row}'] = f'=IFERROR(VLOOKUP($E{row},\'{last_week}\'!$E$1:$O$500,4,FALSE),"New")'
+    new_sheet[f'I{row}'] = f'=IFERROR(VLOOKUP($E{row},\'{last_week}\'!$E$1:$O$500,5,FALSE),"")'
+    new_sheet[f'J{row}'] = f'=IFERROR(VLOOKUP($E{row},\'{last_week}\'!$E$1:$O$500,6,FALSE),"")'
+    new_sheet[f'K{row}'] = f'=IFERROR(VLOOKUP($E{row},\'{last_week}\'!$E$1:$O$500,7,FALSE),"")'
+    new_sheet[f'L{row}'] = f'=IFERROR(VLOOKUP($E{row},\'{last_week}\'!$E$1:$O$500,8,FALSE),"")'
 
 wb_b._sheets.insert(0, wb_b._sheets.pop(wb_b.index(new_sheet)))
 wb_b.save(report_file)
@@ -104,11 +104,11 @@ wb_b = openpyxl.load_workbook(report_file, data_only=True)
 new_sheet = wb_b[today_str]
 
 for row in range(2, max_row):
-    new_sheet[f'AP{row}'] = f'=IFERROR(VLOOKUP($E{row},\'{last_week}\'!$E$1:$O$500,4,FALSE),'New')'
-    new_sheet[f'AQ{row}'] = f'=IFERROR(VLOOKUP($E{row},\'{last_week}\'!$E$1:$O$500,5,FALSE),'')'
-    new_sheet[f'AR{row}'] = f'=IFERROR(VLOOKUP($E{row},\'{last_week}\'!$E$1:$O$500,6,FALSE),'')'
-    new_sheet[f'AS{row}'] = f'=IFERROR(VLOOKUP($E{row},\'{last_week}\'!$E$1:$O$500,7,FALSE),'')'
-    new_sheet[f'AT{row}'] = f'=IFERROR(VLOOKUP($E{row},\'{last_week}\'!$E$1:$O$500,8,FALSE),'')'
+    new_sheet[f'AP{row}'] = f'=IFERROR(VLOOKUP($E{row},\'{last_week}\'!$E$1:$O$500,4,FALSE),"New")'
+    new_sheet[f'AQ{row}'] = f'=IFERROR(VLOOKUP($E{row},\'{last_week}\'!$E$1:$O$500,5,FALSE),"")'
+    new_sheet[f'AR{row}'] = f'=IFERROR(VLOOKUP($E{row},\'{last_week}\'!$E$1:$O$500,6,FALSE),"")'
+    new_sheet[f'AS{row}'] = f'=IFERROR(VLOOKUP($E{row},\'{last_week}\'!$E$1:$O$500,7,FALSE),"")'
+    new_sheet[f'AT{row}'] = f'=IFERROR(VLOOKUP($E{row},\'{last_week}\'!$E$1:$O$500,8,FALSE),"")'
 
 # 應用篩選功能 ========================================
 new_sheet.auto_filter.ref = new_sheet.dimensions
