@@ -5,9 +5,9 @@ from copy import copy
 import xlwings as xw
 
 # 輸入區域 ========================================
-new_data_route = '***.xlsx'
-report_file = '***.xlsx'
-last_week = 'xxxx' # ex. 0920
+new_data_route = '/Users/wubaixian/Desktop/main.xlsx'
+report_file = '/Users/wubaixian/Desktop/Milestones Month View 20240927.xlsx'
+last_week = '0920' # ex. 0920
 
 # 讀取資料================================================
 app = xw.App(visible=False)
@@ -27,8 +27,6 @@ for row in source_sheet.range('A1').expand().value:
 #  移除多餘欄位 ========================================
 last_week_headers = [cell.value for cell in sheet_last_week[1]]
 current_week_headers = [cell.value for cell in new_sheet[1]]
-print(last_week_headers)
-print(current_week_headers)
 extra_columns = []
 for col_idx, header in enumerate(current_week_headers, start=1):
     if header not in last_week_headers:
