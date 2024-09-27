@@ -1,1 +1,3 @@
 # weekly_report_runner
+
+教學連結：https://microsoftapc-my.sharepoint.com/:v:/g/personal/a-tristanwu_microsoft_com/EQswY_BzC35PkmT7i_ScwOEB5IKSZVJI2QmpUQC-NMoQhQ?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=ksGpiO

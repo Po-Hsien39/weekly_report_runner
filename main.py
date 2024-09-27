@@ -5,9 +5,9 @@ from copy import copy
 import xlwings as xw
 
 # 輸入區域 ========================================
-new_data_route = '/Users/wubaixian/Desktop/main.xlsx'
-report_file = '/Users/wubaixian/Desktop/Milestones Month View 20240927.xlsx'
-last_week = '0920' # ex. 0920
+new_data_route = 'xxx.xlsx'
+report_file = 'xxx.xlsx'
+last_week = 'xxxx' # ex. 0920
 
 # 讀取資料================================================
 app = xw.App(visible=False)
